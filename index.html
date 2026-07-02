@@ -1,0 +1,113 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hearts-container"></div>
+
+    <!-- PAGE 1: Welcome -->
+    <div class="card active" id="page-1">
+        <div class="card-content">
+            <div class="text-side">
+                <h1 class="typing">Hyy Baby ❤️ |</h1>
+                <p>Today is your special day! Let me celebrate the incredible woman you are. This is my gift to you - a little journey through our most cherished moments.</p>
+                <button onclick="nextPage(2)">Open Memories ✨</button>
+            </div>
+            <div class="image-side">
+                <img src="https://via.placeholder.com/250x180" alt="Cute Illustration">
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: Birthday Memories -->
+    <div class="card" id="page-2">
+        <div class="card-content layout-reversed">
+            <div class="text-side">
+                <h1 class="title-pink">Birthday Memories</h1>
+                <p>A few words from the bottom of my heart. These are some moments that make you the most beautiful person to me. Most beautiful girl i ever seen in my life! ❤️</p>
+                <button onclick="nextPage(3)">Read My Next ❤️</button>
+            </div>
+            <div class="image-side grid-layout">
+                <div class="photo-grid">
+                    <img src="https://via.placeholder.com/100" class="polaroid" style="transform: rotate(-5deg)">
+                    <img src="https://via.placeholder.com/100" class="polaroid" style="transform: rotate(4deg)">
+                    <img src="https://via.placeholder.com/100" class="polaroid" style="transform: rotate(-3deg)">
+                    <img src="https://via.placeholder.com/100" class="polaroid" style="transform: rotate(6deg)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: Love Note -->
+    <div class="card" id="page-3">
+        <div class="card-content">
+            <div class="text-side scrollable-note">
+                <h3>My Dearest [Name],</h3>
+                <p>On your special day, I want you to know how much you mean to me. You are the most beautiful, amazing, and wonderful person I know. Thank you for bringing so much joy, laughter, and love into my life. Happy Birthday to the woman who makes every moment special. I love you more than words can say.</p>
+                <p>All my love, [Your Name] ❤️</p>
+            </div>
+            <div class="image-side love-note-title">
+                <h2>A Love Note</h2>
+                <p>A few words from the bottom of my heart</p>
+                <button class="btn-small" onclick="nextPage(4)">Let's Play a Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: Interactive Game -->
+    <div class="card grid-card" id="page-4">
+        <h2 class="game-title">Why You're Special 👑</h2>
+        <p class="game-subtitle">Click on the cards to reveal why you're the best girlfriend!</p>
+        <div class="game-grid">
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">You make every day feel like a celebration ✨</span></div>
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">Your laugh is my favorite sound 🎵</span></div>
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">The way you love me unconditionally ❤️</span></div>
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">You shine brighter than anyone 🌟</span></div>
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">You are a queen in every way 👑</span></div>
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">Your creative and artistic soul 🎨</span></div>
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">Your strength and resilience inspire me 💪</span></div>
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">Your beauty inside and out 💖</span></div>
+            <div class="game-box" onclick="revealCard(this)">? <span class="hidden-text">The magic you bring to my life 🪄</span></div>
+        </div>
+        <button id="game-next-btn" style="display:none; margin: 20px auto 0;" onclick="nextPage(5)">Next ➡️</button>
+    </div>
+
+    <!-- PAGE 5: Surprise Present Box -->
+    <div class="card" id="page-5">
+        <div class="gift-container" onclick="nextPage(6)">
+            <div class="gift-box">🎁</div>
+            <h2>Tap to Open!</h2>
+        </div>
+    </div>
+
+    <!-- PAGE 6: Finale Declaration -->
+    <div class="card" id="page-6">
+        <div class="finale-content">
+            <div class="heart-icon">💖</div>
+            <h1>I Love You!</h1>
+            <p>Your birthday is just the beginning, I have so many more happy moments planned for us. Happy Birthday! 🎂</p>
+            <button onclick="nextPage(7)">The End?</button>
+        </div>
+    </div>
+
+    <!-- PAGE 7: Ending Letter & Slideshow Carousel -->
+    <div class="card" id="page-7">
+        <div class="card-content">
+            <div class="image-side">
+                <img src="https://via.placeholder.com/250x180" alt="Ending illustration or memory">
+            </div>
+            <div class="text-side">
+                <h2 class="title-pink">Happy Birthday 🎉</h2>
+                <p>Today is your day to shine and be celebrated. You deserve all the love and happiness in the world. Thank you for being the most amazing girlfriend. My heart is completely yours. I love you more than words can say, and I can't wait to celebrate many more birthdays with you. To the moon and back! 🌙✨</p>
+                <button onclick="restartApp()">Back to Start 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
